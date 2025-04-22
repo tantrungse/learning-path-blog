@@ -1,0 +1,10 @@
+%h1 Your Expense
+
+%p
+  This is an expense of #{number_to_currency @expense.amount}
+  from #{l @expense.received_at.to_date, format: :long}
+
+= image_tag @expense.receipt,
+  alt: "Expense from #{l @expense.received_at.to_date, format: :long}"
+
+= link_to 'Edit Expense', edit_expense_path(@expense), class: 'btn btn-primary'

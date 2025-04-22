@@ -1,0 +1,13 @@
+%h1 Create a new expense
+
+= form_with model: @expense do |f|
+  = f.label :amount
+  = f.text_field :amount
+
+  = f.label :received_at
+  = f.date_field :received_at
+
+  = f.label :receipt
+  = f.file_field :receipt
+
+  = f.submit

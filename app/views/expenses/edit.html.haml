@@ -1,0 +1,16 @@
+%h1 Edit Expense
+
+= form_with model: @expense do |f|
+  .field
+    = f.label :amount
+    = f.text_field :amount
+
+  .field
+    = f.label :received_at
+    = f.datetime_local_field :received_at
+
+  .field
+    = f.label :receipt
+    = f.file_field :receipt
+
+  = f.submit "Update Expense"
